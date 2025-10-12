@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1100
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,12 +103,12 @@ TextureImporter:
       name: Machete_0
       rect:
         serializedVersion: 2
-        x: 588
-        y: 805
-        width: 622
-        height: 715
-      alignment: 9
-      pivot: {x: 0.9127474, y: 0.08827647}
+        x: 76
+        y: 104
+        width: 80
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

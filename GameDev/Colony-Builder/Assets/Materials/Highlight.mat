@@ -27,6 +27,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: e3db9bd1f6f885646a93bf7d80984df2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_82b493b3145a4b48a2c8500cc5b87ce0_Out_0_Texture2D:
+        m_Texture: {fileID: 2800000, guid: b7991c8e383184540ad4a8ebc40dae99, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -41,6 +45,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _CrackThickness: 0.2
+    - _Highlight: 0
+    - _OutlineThickness: 0.01
+    - _Radius: 0
     - _Thickness: 0.005
     m_Colors:
     - _OutlineColor: {r: 0.9920989, g: 0.5606147, b: 0, a: 1}

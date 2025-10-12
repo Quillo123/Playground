@@ -1,16 +1,25 @@
 fileFormatVersion: 2
-guid: e3db9bd1f6f885646a93bf7d80984df2
+guid: 1818111c012b6e44a860fb69767da5ce
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7646531256951936728
-    second: Tubbo_sheet_0
+      213: -823969826764498401
+    second: thumbnail_Mousesprite1-walk-animation_0
   - first:
-      213: -2190685502841632218
-    second: Tubbo_sheet_1
+      213: -8365419927241514924
+    second: thumbnail_Mousesprite1-walk-animation_1
   - first:
-      213: 1241100887548063777
-    second: Tubbo_sheet_2
+      213: -64761676582161230
+    second: thumbnail_Mousesprite1-walk-animation_2
+  - first:
+      213: 315256167659730842
+    second: thumbnail_Mousesprite1-walk-animation_3
+  - first:
+      213: 5721728840351694582
+    second: thumbnail_Mousesprite1-walk-animation_4
+  - first:
+      213: -4328388509932061575
+    second: thumbnail_Mousesprite1-walk-animation_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1100
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,67 +115,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tubbo_sheet_0
+      name: thumbnail_Mousesprite1-walk-animation_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1984
-        width: 1984
-        height: 1984
+        x: 179
+        y: 1319
+        width: 402
+        height: 532
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8d69a864aafed1a60800000000000000
-      internalID: 7646531256951936728
+      spriteID: f1adf02eecba094f0800000000000000
+      internalID: -823969826764498401
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tubbo_sheet_1
+      name: thumbnail_Mousesprite1-walk-animation_1
       rect:
         serializedVersion: 2
-        x: 1984
-        y: 1984
-        width: 1984
-        height: 1984
+        x: 819
+        y: 1319
+        width: 412
+        height: 522
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 62ac684542f1991e0800000000000000
-      internalID: -2190685502841632218
+      spriteID: 450abc7e5ee08eb80800000000000000
+      internalID: -8365419927241514924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tubbo_sheet_2
+      name: thumbnail_Mousesprite1-walk-animation_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1984
-        height: 1984
+        x: 1459
+        y: 1319
+        width: 442
+        height: 532
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 12079bc7ea6493110800000000000000
-      internalID: 1241100887548063777
+      spriteID: 2b4f248299be91ff0800000000000000
+      internalID: -64761676582161230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thumbnail_Mousesprite1-walk-animation_3
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 679
+        width: 402
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a97fb9e60d3006400800000000000000
+      internalID: 315256167659730842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thumbnail_Mousesprite1-walk-animation_4
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 679
+        width: 412
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fe3546b01aa76f40800000000000000
+      internalID: 5721728840351694582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thumbnail_Mousesprite1-walk-animation_5
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 679
+        width: 442
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97cfd9f35997ee3c0800000000000000
+      internalID: -4328388509932061575
       vertices: []
       indices: 
       edges: []
@@ -175,7 +250,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: be92af4bb6a1c9148b1af2ed60e53d60
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -185,9 +260,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Tubbo_sheet_0: 7646531256951936728
-      Tubbo_sheet_1: -2190685502841632218
-      Tubbo_sheet_2: 1241100887548063777
+      thumbnail_Mousesprite1-walk-animation_0: -823969826764498401
+      thumbnail_Mousesprite1-walk-animation_1: -8365419927241514924
+      thumbnail_Mousesprite1-walk-animation_2: -64761676582161230
+      thumbnail_Mousesprite1-walk-animation_3: 315256167659730842
+      thumbnail_Mousesprite1-walk-animation_4: 5721728840351694582
+      thumbnail_Mousesprite1-walk-animation_5: -4328388509932061575
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

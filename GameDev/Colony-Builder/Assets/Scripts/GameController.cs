@@ -8,6 +8,8 @@ public class GameController : MonoBehaviour
     public static GameController Instance { get; private set; }
 
     public GameObject MainPlayer;
+    public Ragdoll defaultRagdoll;
+    public Ground ground;
 
     [Command("@a")]
     static Vector2 PlayerPos()
@@ -32,5 +34,13 @@ public class GameController : MonoBehaviour
         Logger.errors += Debug.LogError;
         Logger.warnings += Debug.LogWarning;
         Logger.Log("Initialized Logs", gameObject);
+
+        LoadResources();
+        ground = FindFirstObjectByType<Ground>();
+    }
+
+    void LoadResources()
+    {
+        defaultRagdoll = Resources.Load<Ragdoll>("Prefabs/defaultRagdoll");
     }
 }

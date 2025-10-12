@@ -114,6 +114,14 @@ public class PlayerController : MonoBehaviour
             facingDir = movementInput.normalized;
         }
 
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            if(GameController.Instance.ground.PlaceItemOnGround(itemHolder.item, pos))
+            {
+                //inventory.RemoveItem()
+            }
+        }
 
 
         UpdateSpriteFacing();

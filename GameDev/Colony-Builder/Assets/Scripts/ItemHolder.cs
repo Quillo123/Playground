@@ -23,7 +23,7 @@ public class ItemHolder : MonoBehaviour
     public bool equipped = false;    
 
     SpriteRenderer sr;
-    string item = null;
+    public string item = null;
 
     private void OnDrawGizmosSelected()
     {

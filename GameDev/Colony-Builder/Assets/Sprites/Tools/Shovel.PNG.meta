@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1100
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,12 +103,12 @@ TextureImporter:
       name: Shovel_0
       rect:
         serializedVersion: 2
-        x: 371
-        y: 340
-        width: 1118
-        height: 1087
-      alignment: 9
-      pivot: {x: 0.87659687, y: 0.8810386}
+        x: 48
+        y: 44
+        width: 144
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

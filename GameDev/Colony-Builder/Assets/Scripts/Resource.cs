@@ -19,39 +19,38 @@ public class Resource : MonoBehaviour
 
     private bool destroying = false;
 
-    public float fadeDuration = 1;
-
     SpriteRenderer sr;
+    Health health;
 
     public Material defaultMat;
     public Material highlight;
     public Material dissolve;
 
+    
+
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.green;
+        Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere((Vector2)transform.position + spawnOffset, 0.5f);
     }
 
     private void Start()
     {
         sr = GetComponent<SpriteRenderer>();
-        if(defaultMat == null)
+        if(sr == null)
         {
-            defaultMat = sr.sharedMaterial;
+            sr = GetComponentInChildren<SpriteRenderer>();
         }
-        else
-        {
-            sr.sharedMaterial = defaultMat;
-        }
+        health = GetComponent<Health>();
+        health.OnDeath += DropItems;
     }
 
     private void OnMouseEnter()
     {
         if (!destroying)
         {
-            sr.sharedMaterial = highlight;
+            sr.material.SetInt("_Highlight", 1);
         }
     }
 
@@ -59,7 +58,7 @@ public class Resource : MonoBehaviour
     {
         if (!destroying)
         {
-            sr.sharedMaterial = defaultMat;
+            sr.material.SetInt("_Highlight", 0);
         }
     }
 
@@ -67,59 +66,44 @@ public class Resource : MonoBehaviour
     { 
         if(Input.GetMouseButton(0) && !destroying)
         {
-            sr.sharedMaterial = defaultMat;
-
-            if(startTime == 0) startTime = Time.time;
-
-            var elapsedTime = Time.time - startTime;
-
-            sr.material.SetFloat("_Radius", elapsedTime / breakTime);
-            if (elapsedTime >= breakTime)
+            sr.material.SetFloat("_Radius", 1 - health.ratio);
+            
+            if(Time.time - startTime > 0.5)
             {
-                StartCoroutine(DropItemsAndDestroy());
+                startTime = Time.time;
+                health.Damage(5);
             }
-        }
-        else
-        {
-            startTime = 0;
         }
     }
 
-    private IEnumerator DropItemsAndDestroy()
+    public void DropItems(GameObject obj)
     {
-        destroying = true;
-        sr.sharedMaterial = dissolve;
+        GameController.Instance.StartCoroutine(
+            DropItemsOverTime(
+                transform.position + spawnOffset.ToVector3(),
+                drops,
+                health.ragdoll.fadeDuration,
+                spawnForce
+                )
+            );
+    }
 
-        float elapsedTime = 0f;
+    private static IEnumerator DropItemsOverTime(Vector3 pos, List<Item> drops, float duration, float force)
+    {
 
-
-        float dropwait = (fadeDuration * .5f) / drops.Count;
+        float dropwait = (duration * .5f) / drops.Count;
         float droptime = dropwait;
-        int i = 0;
 
+        for(int i = 0; i < drops.Count; i++) {
 
-        while (elapsedTime < fadeDuration || i < drops.Count)
-        {
-            elapsedTime += Time.deltaTime;
-            float fade = Mathf.Lerp(1f, 0f, elapsedTime / fadeDuration);
-            sr.material.SetFloat("_Fade", fade);
+            SpawnDrop(drops[i], pos, force);
 
-            if (elapsedTime > droptime && i < drops.Count)
-            {
-                SpawnDrop(drops[i]);
-                droptime += dropwait;
-                i++;
-            }
-
-            yield return null; // Wait for the next frame
+            yield return new WaitForSeconds(dropwait); // Wait for the next frame
         }
-
-        Destroy(gameObject);
     }
 
-    void SpawnDrop(Item drop)
+    static void SpawnDrop(Item drop, Vector3 spawnpos, float spawnForce)
     {
-        var spawnpos = transform.position + new Vector3(spawnOffset.x, spawnOffset.y, 0f);
         var itemE = Instantiate(ItemDatabase.Instance.itemPrefab, spawnpos, Quaternion.identity);
         itemE.item = drop;
 

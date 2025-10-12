@@ -36,6 +36,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _CrackTexture:
+        m_Texture: {fileID: 2800000, guid: b7991c8e383184540ad4a8ebc40dae99, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 8066933d7167bce46bdb0049df624022, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -55,7 +59,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Radius: 0
-    - _Thickness: 0.1313
+    - _Thickness: 0
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
