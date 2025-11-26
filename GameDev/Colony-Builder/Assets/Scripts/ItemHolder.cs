@@ -48,7 +48,21 @@ public class ItemHolder : MonoBehaviour
 
     private void Awake()
     {
+        if(equippedItem == null)
+        {
+            equippedItem = new GameObject("Held_Item").transform;
+            equippedItem.gameObject.AddComponent<SpriteRenderer>();
+            equippedItem.parent = transform;
+            equippedItem.position = transform.position;
+            
+        }
         sr = equippedItem.GetComponent<SpriteRenderer>();
+    }
+
+    private void Start()
+    {
+        UpdateEquipped(equipped);
+        SwapEquippedItem(item);
     }
 
     public void SwapEquippedItem(string itemID)
@@ -65,7 +79,19 @@ public class ItemHolder : MonoBehaviour
         }
         equippedItem.gameObject.SetActive(equipped && !string.IsNullOrEmpty(item));
     }
-    
+
+#if UNITY_EDITOR
+
+    [Button("Button_UpdateEquipped")]
+    public bool button_UpdateEquipped;
+    public void Button_UpdateEquipped()
+    {
+        UpdateEquipped(!equipped);
+        UpdateHoldPosition(currentDirection);
+    }
+
+#endif
+
     public void UpdateEquipped(bool isEquipped)
     {
         equipped = isEquipped;
